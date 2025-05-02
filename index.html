@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      let dscc = window.dscc;
+
+      function setDateFilter(dateStr) {
+        dscc.sendInteraction({
+          interactionData: {
+            selectedDate: dateStr
+          }
+        });
+      }
+
+      function drawCalendar() {
+        const container = document.getElementById("calendar");
+        const input = document.createElement("input");
+        input.type = "date";
+        input.onchange = (e) => {
+          setDateFilter(e.target.value);
+        };
+        container.appendChild(input);
+      }
+
+      drawCalendar();
+    </script>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 1em;
+      }
+      input {
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="calendar"></div>
+  </body>
+</html>
