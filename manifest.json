@@ -1,0 +1,13 @@
+{
+  "data": {
+    "interaction": {
+      "supportedInteractionTypes": ["SELECT"]
+    }
+  },
+  "style": {},
+  "theme": {},
+  "name": "Custom Date Picker",
+  "description": "Select a date to filter dashboard by 31 days prior",
+  "author": "Your Name",
+  "icon": "calendar_today"
+}
